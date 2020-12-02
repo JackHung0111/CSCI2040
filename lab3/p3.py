@@ -25,7 +25,7 @@ def query_following(user_name):
 def update():
     dict2 = load_data(filename)
     ### add a new follower Lorna Carrico to the user William Smith
-    dict2["Lorna Carrico"].append("William Smith")
+    dict2["William Smith"].append("Lorna Carrico")
     ### add a new user Anne Smelcer with followers Christine Phillips, Charles Mason and Tim Lathrop
     dict2["Anne Smelcer"] = ["Christine Phillips", "Charles Mason", "Tim Lathrop"]
     ### use pickle to save the updated dictionary to the same directory hierarchy as your script for this exercise as file followers-updated.pydata
