@@ -6,9 +6,12 @@ filename = "followers.pydata"
 
 # (a)
 def load_data(file):
-    f1 = open(file,"rb")
-    result = pkl.load(f1)
-    f1.close()
+    try:
+        f1 = open(file,"rb")
+        result = pkl.load(f1)
+        f1.close()
+    except:
+        result = {}
     return result
 
 # (b)
@@ -29,8 +32,12 @@ def update():
     ### add a new user Anne Smelcer with followers Christine Phillips, Charles Mason and Tim Lathrop
     dict2["Anne Smelcer"] = ["Christine Phillips", "Charles Mason", "Tim Lathrop"]
     ### use pickle to save the updated dictionary to the same directory hierarchy as your script for this exercise as file followers-updated.pydata
-    f2 = open("followers-updated.pydata","wb")
-    pkl.dump(dict2,f2)
+    try:
+        f2 = open("followers-updated.pydata","wb")
+        pkl.dump(dict2,f2)
+        f2.close()
+    except:
+        print("Error")
 
 # (d)
 def get_num_of_followers():
