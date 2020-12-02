@@ -40,6 +40,6 @@ def get_num_of_followers():
     f3.close()
     result = {}
     for name in dict3:
-        result[name.title()] = len(dict3[name])
+        result[name] = len(dict3[name])
     return result
 
