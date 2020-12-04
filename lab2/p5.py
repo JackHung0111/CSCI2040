@@ -4,7 +4,7 @@
 def count_alphabet(test_string):
     count = 0
     for char in test_string:
-        if ((char >= 'a' and char <= 'z') or (char >= 'A' and char <= 'Z')):
+        if (char.isalpha()):
             count += 1
     return count
 
